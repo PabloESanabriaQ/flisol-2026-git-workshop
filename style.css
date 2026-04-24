@@ -3,21 +3,23 @@
    Villa Mercedes · Club de Programación UNViMe
    ============================================================ */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --verde:    #3fb950;
-  --naranja:  #f0883e;
-  --oscuro:   #0d1117;
-  --gris:     #f6f8fa;
-  --borde:    #d0d7de;
-  --texto:    #1f2328;
-  --muted:    #656d76;
-  --blanco:   #ffffff;
+  --verde: #3fb950;
+  --naranja: #f0883e;
+  --oscuro: #0d1117;
+  --gris: #f6f8fa;
+  --borde: #d0d7de;
+  --texto: #1f2328;
+  --muted: #656d76;
+  --blanco: #ffffff;
 }
 
 body {
@@ -28,12 +30,8 @@ body {
   line-height: 1.6;
 }
 
-/* ── Header ─────────────────────────────────────────────────
-   ERROR: display debería ser "flex" para que logo, texto y
-   nav queden alineados en fila. Con "block" todo se apila.
-   ────────────────────────────────────────────────────────── */
 header {
-  display: block;           /* ← ERROR: cambiá esto a "flex" */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -65,23 +63,6 @@ header {
 .header-sub {
   font-size: 0.8rem;
   color: var(--muted);
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-  flex-shrink: 0;
-}
-
-nav a {
-  color: var(--blanco);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: var(--verde);
 }
 
 /* ── Hero ───────────────────────────────────────────────── */
@@ -156,7 +137,8 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   margin: 2rem 0 3rem;
-  margin-left: 9999px;     /* ← ERROR: cambiá esto a 0 */
+  margin-left: 9999px;
+  /* ← ERROR: cambiá esto a 0 */
 }
 
 .info-card {
@@ -265,7 +247,7 @@ main {
 }
 
 .taller-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .taller-icon {

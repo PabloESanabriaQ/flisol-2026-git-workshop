@@ -21,7 +21,7 @@ Este año celebramos la **décima** edición del FLISOL en Villa Mercedes
 
 **Fecha:** Sábado 25 de abril de 2026
 **Horario:** Desde las 12:30 hs
-**Entrada: Paga y restricta**  
+**Entrada: gratuita y libre**  
 
 ---
 

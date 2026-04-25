@@ -1,308 +1,171 @@
 /* ============================================================
-   FLISOL 2026 — Estilos principales
-   Villa Mercedes · Club de Programación UNViMe
+   FLISOL 2026 — Tema Claro (Paleta Personalizada, 2 Columnas)
    ============================================================ */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --verde:    #3fb950;
-  --naranja:  #f0883e;
-  --oscuro:   #0d1117;
-  --gris:     #f6f8fa;
-  --borde:    #d0d7de;
-  --texto:    #1f2328;
-  --muted:    #656d76;
-  --blanco:   #ffffff;
+  --prussian-blue: #071A3Dff;
+  --sandy-clay: #EBB47Eff;
+  --ink-black: #050F1Fff;
+  --tropical-teal: #2BB2AFff;
+  --blanco: #ffffff;
+  --fondo-claro: #fafafa;
+  --texto-suave: #3a4a5b;
 }
 
 body {
   font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 16px;
-  color: var(--texto);
-  background: var(--blanco);
-  line-height: 1.6;
+  background-color: var(--ink-black);
+  color: var(--ink-black);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-/* ── Header ─────────────────────────────────────────────────
-   ERROR: display debería ser "flex" para que logo, texto y
-   nav queden alineados en fila. Con "block" todo se apila.
-   ────────────────────────────────────────────────────────── */
 header {
-  display: block;           /* ← ERROR: cambiá esto a "flex" */
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  background: var(--oscuro);
-  color: var(--blanco);
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--ink-black);
+  box-shadow: 0 2px 10px rgba(5, 15, 31, 0.15);
 }
 
 .logo {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  font-size: 1.5rem;
 }
 
 .header-title {
-  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--verde);
+  letter-spacing: 1px;
+  color: var(--sandy-clay);
 }
 
-.header-sub {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-nav {
+.main-container {
+  flex: 1;
   display: flex;
-  gap: 1.5rem;
-  flex-shrink: 0;
-}
-
-nav a {
-  color: var(--blanco);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: var(--verde);
-}
-
-/* ── Hero ───────────────────────────────────────────────── */
-.hero {
-  background: var(--oscuro);
-  color: var(--blanco);
-  text-align: center;
-  padding: 5rem 2rem 4rem;
-  border-bottom: 4px solid var(--naranja);
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--verde);
-  margin-bottom: 0.75rem;
-}
-
-.hero-sub {
-  font-size: 1.1rem;
-  color: #8b949e;
-  margin-bottom: 2rem;
-}
-
-.btn-primary {
-  display: inline-block;
-  background: var(--naranja);
-  color: var(--blanco);
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
-
-.btn-primary:hover {
-  opacity: 0.85;
-}
-
-/* ── Sections ───────────────────────────────────────────── */
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.section {
-  margin-bottom: 4rem;
-}
-
-.section h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--verde);
-  color: var(--oscuro);
-}
-
-.section p {
-  margin-bottom: 1rem;
-  color: var(--texto);
-}
-
-/* ── Info destacada ─────────────────────────────────────────
-   ERROR: margin-left de 9999px manda este bloque fuera de la
-   pantalla hacia la derecha. Debería ser 0 (o eliminarse).
-   ────────────────────────────────────────────────────────── */
-.info-destacada {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2rem 0 3rem;
-  margin-left: 9999px;     /* ← ERROR: cambiá esto a 0 */
-}
-
-.info-card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
-  background: var(--gris);
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  padding: 1.25rem 1.75rem;
-  min-width: 180px;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 1000px;
   text-align: center;
+  padding: 2rem 2rem;
+  background: var(--blanco);
+  border-top: 5px solid var(--tropical-teal);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(7, 26, 61, 0.08);
 }
 
-.info-icon {
+h1 {
   font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--prussian-blue);
 }
 
-.info-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.info-value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--texto);
-}
-
-/* ── Agenda ─────────────────────────────────────────────── */
-.agenda-grid {
+.info-row {
   display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  overflow: hidden;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-top: 1px solid var(--tropical-teal);
+  border-bottom: 1px solid var(--tropical-teal);
+  font-size: 0.95rem;
+  color: var(--ink-black);
+  font-weight: 500;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--texto-suave);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.agenda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .agenda-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid var(--borde);
-  background: var(--blanco);
-  transition: background 0.15s;
+  gap: 0.75rem;
+  background-color: var(--fondo-claro);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--sandy-clay);
 }
 
-.agenda-item:last-child {
-  border-bottom: none;
+.agenda-item.break {
+  border-left-color: var(--tropical-teal);
+  background-color: rgba(43, 178, 175, 0.05);
 }
 
-.agenda-item:hover {
-  background: var(--gris);
-}
-
-.agenda-item.destacado {
-  background: #f0fff4;
-  border-left: 4px solid var(--verde);
-}
-
-.hora {
+.time {
+  font-family: monospace;
   font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--naranja);
-  min-width: 3.5rem;
-  flex-shrink: 0;
-  padding-top: 0.1rem;
-  font-family: "Consolas", monospace;
-}
-
-.agenda-detalle {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.agenda-detalle strong {
-  font-size: 1rem;
-  color: var(--texto);
-}
-
-.agenda-detalle span {
+  color: var(--prussian-blue);
   font-size: 0.85rem;
-  color: var(--muted);
+  min-width: 65px;
+  margin-top: 0.1rem;
 }
 
-/* ── Talleres ───────────────────────────────────────────── */
-.talleres-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-}
-
-.taller-card {
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  padding: 1.5rem;
-  background: var(--blanco);
-  transition: box-shadow 0.2s;
-}
-
-.taller-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
-
-.taller-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.taller-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--oscuro);
-}
-
-.taller-card p {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: 0.75rem;
-}
-
-.taller-tag {
-  display: inline-block;
-  font-size: 0.75rem;
+.title {
+  font-size: 0.85rem;
   font-weight: 600;
-  background: var(--gris);
-  border: 1px solid var(--borde);
-  border-radius: 20px;
-  padding: 0.2rem 0.75rem;
-  color: var(--texto);
+  line-height: 1.3;
+  color: var(--ink-black);
 }
 
-/* ── Footer ─────────────────────────────────────────────── */
-footer {
-  background: var(--oscuro);
-  color: #8b949e;
-  text-align: center;
-  padding: 2.5rem 1rem;
-  font-size: 0.875rem;
-  line-height: 2;
+.footer-minimal {
+  font-size: 0.85rem;
+  color: var(--prussian-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    border: none;
+    padding: 0.5rem 0;
+  }
+
+  .hero-card {
+    padding: 1.5rem;
+  }
+
+  .agenda-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  body {
+    overflow: auto;
+    height: auto;
+    min-height: 100vh;
+  }
 }

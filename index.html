@@ -1,179 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FLISOL 2026 — Villa Mercedes</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <header>
     <div class="logo">🐧</div>
     <div class="header-text">
       <span class="header-title">FLISOL 2026</span>
-      <span class="header-sub">Festival Latinoamericano de Software Libre</span>
     </div>
-    <nav>
-      <a href="#sobre">Sobre el evento</a>
-      <a href="#agenda">Agenda</a>
-      <a href="#talleres">Talleres</a>
-      <a href="#lugar">Lugar</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h1>10ª Edición</h1>
-    <p class="hero-sub">Sábado 25 de abril de 2026 · Villa Mercedes, San Luis · Entrada libre y gratuita</p>
-    <a href="#agenda" class="btn-primary">Ver la agenda</a>
-  </section>
+  <main class="main-container">
+    <section class="hero-card">
+      <h1>Festival Latinoamericano de Instalación de Software Libre</h1>
 
-  <main>
+      <div class="info-row">
+        <p><strong>Fecha:</strong> Sábado 25 de abril</p>
+        <p><strong>Lugar:</strong> Villa Mercedes, San Luis</p>
+      </div>
 
-    <section id="sobre" class="section">
-      <h2>¿Qué es el FLISOL?</h2>
-      <p>
-        El Festival Latinoamericano de Instalación de Software Libre (FLISOL) es el evento
-        de difusión de Software Libre más grande de Latinoamérica. Se realiza cada año,
-        simultáneamente, en ciudades de toda la región, de forma gratuita y abierta a todo el público.
+      <p class="description">
+        Charlas, talleres prácticos y stands de herramientas libres.
+        Un evento gratuito y abierto para toda la comunidad.
       </p>
-      <p>
-        En su <strong>décima edición</strong>, FLISOL llega a Villa Mercedes con charlas,
-        talleres prácticos y stands donde podés conocer herramientas de software libre
-        para usar en tu vida cotidiana y en tu trabajo.
-      </p>
-    </section>
 
-    <!-- ERROR: este div tiene un margin-left que lo manda fuera de la pantalla -->
-    <div class="info-destacada">
-      <div class="info-card">
-        <span class="info-icon">📅</span>
-        <span class="info-label">Fecha</span>
-        <span class="info-value">Sábado 25 de abril de 2026</span>
-      </div>
-      <div class="info-card">
-        <span class="info-icon">🕧</span>
-        <span class="info-label">Horario</span>
-        <span class="info-value">Desde las 12:30 hs</span>
-      </div>
-      <div class="info-card">
-        <span class="info-icon">📍</span>
-        <span class="info-label">Lugar</span>
-        <span class="info-value">Juan Llerena y García Lorca · Villa Mercedes</span>
-      </div>
-      <div class="info-card">
-        <span class="info-icon">💸</span>
-        <span class="info-label">Costo</span>
-        <span class="info-value">Gratis para todo el mundo</span>
-      </div>
-    </div>
-
-    <section id="agenda" class="section">
-      <h2>Charlas y Talleres</h2>
       <div class="agenda-grid">
-
         <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>Código abierto en el espacio: Proyecto Acrux</strong>
-            <span>Charla</span>
-          </div>
+          <span class="time">12.45HS</span>
+          <span class="title">OCTAVE, CÁLCULO NUMÉRICO CON CÓDIGO ABIERTO</span>
         </div>
-
         <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>Octave: cálculo numérico con código abierto</strong>
-            <span>Charla</span>
-          </div>
+          <span class="time">13.30HS</span>
+          <span class="title">GIT HAPPENS: TRABAJANDO EN EQUIPO SIN MORIR EN EL INTENTO</span>
         </div>
-
+        <div class="agenda-item break">
+          <span class="time">14.15HS</span>
+          <span class="title">COFFEE BREAK</span>
+        </div>
         <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>Qwencode: alternativa a ClaudeCode desde la terminal</strong>
-            <span>Charla</span>
-          </div>
+          <span class="time">14.45HS</span>
+          <span class="title">CODIGO ABIERTO EN EL ESPACIO: PROYECTO ACRUX</span>
         </div>
-
         <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>De la calle angosta a la Ekoparty: hackeando en comunidad</strong>
-            <span>Charla</span>
-          </div>
+          <span class="time">16.15HS</span>
+          <span class="title">DEBCONF26 - NOS VEMOS EN SANTA FE</span>
         </div>
-
         <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>DebConf26: nos vemos en Santa Fe</strong>
-            <span>Charla</span>
-          </div>
+          <span class="time">17.00HS</span>
+          <span class="title">TALLER DIY RUBBERDUCKY</span>
         </div>
-
         <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>¿Te animás a contribuir al software libre desde Debian?</strong>
-            <span>Charla</span>
-          </div>
+          <span class="time">17.45HS</span>
+          <span class="title">DE LA CALLE ANGOSTA A LA EKOPARTY: HACKEANDO EN COMUNIDAD</span>
         </div>
+      </div>
 
-        <div class="agenda-item">
-          <div class="agenda-detalle">
-            <strong>Taller DIY Rubberducky</strong>
-            <span>Taller</span>
-          </div>
-        </div>
-
-        <div class="agenda-item destacado">
-          <div class="agenda-detalle">
-            <strong>Git Happens: trabajando en equipo sin morir en el intento</strong>
-            <span>Taller · Club de Programación UNViMe</span>
-          </div>
-        </div>
-
+      <div class="footer-minimal">
+        Organizado por el Club de Programación UNViMe
       </div>
     </section>
-
-    <section id="talleres" class="section">
-      <h2>Talleres destacados</h2>
-      <div class="talleres-grid">
-
-        <div class="taller-card">
-          <div class="taller-icon">🌿</div>
-          <h3>Git Happens</h3>
-          <p>Trabajando en equipo sin morir en el intento. Commits, ramas y pull requests con un proyecto real del FLISOL.</p>
-          <span class="taller-tag">Club de Programación UNViMe</span>
-        </div>
-
-        <div class="taller-card">
-          <div class="taller-icon">🦆</div>
-          <h3>Taller DIY Rubberducky</h3>
-          <p>Construí tu propio dispositivo de automatización con hardware libre y software abierto.</p>
-          <span class="taller-tag">Taller práctico</span>
-        </div>
-
-        <div class="taller-card">
-          <div class="taller-icon">🐧</div>
-          <h3>Contribuir desde Debian</h3>
-          <p>¿Te animás a contribuir al software libre? Te mostramos cómo dar tus primeros pasos desde Debian.</p>
-          <span class="taller-tag">Charla / Taller</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="lugar" class="section">
-      <h2>¿Dónde es?</h2>
-      <p>
-        Juan Llerena y García Lorca<br />
-        Villa Mercedes, San Luis, Argentina
-      </p>
-      <p>Entrada libre y gratuita. Talleres — Charlas — Sorteos.</p>
-    </section>
-
   </main>
 
-  <footer>
-    <p>FLISOL 2026 · Villa Mercedes · Organizado por el Club de Programación UNViMe</p>
-    <p>El software libre es tuyo. Usalo, estudialo, compartilo, mejoralo.</p>
-  </footer>
-
 </body>
+
 </html>

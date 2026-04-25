@@ -14,17 +14,14 @@ con quien quiera conocerlo.
 
 ## Esta edición
 
-Este año celebramos la **desima** edición del FLISOL.       <!-- ERROR: "desima" → "décima" -->
-Es un hito importante para la comunidad de software libre en Latinoamérica.
-
-La sede de Villa Mersedes es:                               <!-- ERROR: "Mersedes" → "Mercedes" -->
+Este año celebramos la **décima** edición del FLISOL en Villa Mercedes
 
 > **Juan Llerena y García Lorca**
 > Villa Mercedes, San Luis, Argentina
 
 **Fecha:** Sábado 25 de abril de 2026
 **Horario:** Desde las 12:30 hs
-**Entrada:** Libre y gratuita
+**Entrada: Paga y restricta**  
 
 ---
 
@@ -45,23 +42,23 @@ El acceso al código fuente es una condición indispensable para las libertades 
 
 ## Charlas y talleres
 
-| Título | Tipo |
+| Título | Horario |
 |--------|------|
-| Código abierto en el espacio: Proyecto Acrux | Charla |
-| Octave: cálculo numérico con código abierto | Charla |
-| Qwencode: alternativa a ClaudeCode desde la terminal | Charla |
-| De la calle angosta a la Ekoparty: hackeando en comunidad | Charla |
-| DebConf26: nos vemos en Santa Fe | Charla |
-| ¿Te animás a contribuir al software libre desde Debian? | Charla |
-| Taller DIY Rubberducky | Taller |
-| Git Happens: trabajando en equipo sin morir en el intento | Taller |
+| Octave: cálculo numérico con código abierto | 12:45 |
+| Git Happens: trabajando en equipo sin morir en el intento | 13:30 |
+| Coffee Break | 14:15 |
+| Código abierto en el espacio: Proyecto Acrux | 14:45 |
+| Opencode: La IA agénica de código abierto para todos | 15:30 |
+| DebConf26: nos vemos en Santa Fe | 16:15 |
+| ¿Te animás a contribuir al software libre desde Debian? | 16:30 |
+| Taller DIY Rubberducky | 17:00 |
+| De la calle angosta a la Ekoparty: hackeando en comunidad | 17:45 |
 
 ---
 
 ## ¿Cómo llegar?
 
-El evento se realiza en la esquina de **Juan Llerena y García Lorca**, en el centro de
-Villa Mercedes. Podés llegar caminando, en bicicleta o en colectivo.
+El evento se realiza en la **UNViMe**, en la sede del barrio Los Poetas:  en **Juan Llerena y García Lorca**.
 
 ---
 
@@ -73,17 +70,7 @@ Si querés participar más activamente podés:
 
 - **Venir como asistente** — aprendé, preguntá, instalá
 - **Traer tu computadora** — te ayudamos a probar o instalar software libre
-- **Sumarte como voluntario** — escribinos a través de nuestras redes
+- **Sumate** — escribinos a través de nuestras redes [flisolvm en Instagram](https://instagram.com/flisolvm)
 
 ---
 
-## Sobre el Club de Programación UNViMe
-
-El Club de Programación UNViMe es un espacio de aprendizaje y colaboración para
-estudiantes y entusiastas de la tecnología en Villa Mercedes. Organizamos talleres,
-charlas y hackatones a lo largo del año.
-
----
-
-*Documento mantenido por el Club de Programación UNViMe.*
-*Última actualización: abril 2026.*

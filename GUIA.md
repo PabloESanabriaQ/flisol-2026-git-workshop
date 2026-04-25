@@ -14,7 +14,7 @@ Verificá que Git está instalado abriendo una terminal y corriendo:
 git --version
 ```
 
-Deberías ver algo como `git version 2.x.x`. Si aparece un error, avisá a un facilitador.
+Deberías ver algo como `git version 2.x.x`. Si aparece un error, avisanos.
 
 ---
 
@@ -46,8 +46,6 @@ Clonar significa descargar una copia completa del repositorio a tu computadora, 
 git clone https://github.com/pabloesanabriaq/flisol-2026-git-workshop
 ```
 
-> 📝 Reemplazá la URL con la que te da el facilitador.
-
 Entrá a la carpeta que se creó:
 
 ```bash
@@ -72,19 +70,17 @@ Deberías ver tres archivos:
 Tomá unos minutos para revisar los archivos **antes** de corregir nada.
 
 **Si sabés un poco de HTML/CSS:**  
-Abrí `index.html` en el navegador. ¿Ves algo raro? Explorá también `style.css` en un editor de texto.
+Abrí `index.html` en el navegador. ¿Ves algo raro?
 
 **Si no sabés nada de programación:**  
-Abrí `FLISOL.md` en cualquier editor de texto (el Bloc de Notas funciona). Leé el contenido y buscá errores de tipeo.
+Abrí `FLISOL.md` en cualquier editor de texto (el Bloc de Notas funciona). Leé el contenido y buscá errores
 
-### 🔍 Pista — qué buscar
+🔍 Pista — qué buscar
 
 | Archivo | Error |
 |---------|-------|
-| `style.css` | El header tiene `display: block` — debería ser `display: flex` |
-| `index.html` | Un div tiene `margin-left: 9999px` — lo manda fuera de la pantalla |
-| `FLISOL.md` | La palabra "décima" está escrita como "desima" |
-| `FLISOL.md` | El nombre de la ciudad tiene un error de tipeo |
+| `index.html` | Tal vez falten algunas charlas, fijate cuáles y corregilo |
+| `FLISOL.md` | Es posible que alguno de los datos del evento esté mal, ¿te das cuenta cuál? |
 
 > 💬 **Momento de discusión** — Antes de tocar nada: ¿cómo describirías este error si le explicaras a alguien qué cambio vas a hacer? Eso es exactamente lo que va a ir en tu mensaje de commit.
 
@@ -103,14 +99,14 @@ git status
 La primera línea dice `On branch main`. Ahora creá tu rama con un nombre descriptivo:
 
 ```bash
-git checkout -b fix/tu-nombre-descripcion-del-error
+git checkout -b fix-tu-nombre-descripcion-del-error
 ```
 
 **Ejemplos de nombres de rama:**
+
 ```
-fix/ana-header-css
-fix/carlos-typo-markdown
-fix/sofia-margin-viewport
+fix-error-descripcion
+fix-agregar-charlas
 ```
 
 > 💡 Usá letras minúsculas, guiones en lugar de espacios, y sé descriptivo. Los nombres de rama son comunicación.
@@ -121,7 +117,7 @@ Verificá que el cambio funcionó:
 git status
 ```
 
-Ahora la primera línea dice `On branch fix/tu-nombre-...` — estás en tu propia rama. Los cambios que hagas acá no afectan `main` ni a nadie más.
+Ahora la primera línea dice `On branch fix-...` — estás en tu propia rama. Los cambios que hagas acá no afectan `main` ni a nadie más.
 
 ---
 
@@ -130,30 +126,6 @@ Ahora la primera línea dice `On branch fix/tu-nombre-...` — estás en tu prop
 Corregí **un solo error** por rama. Esto hace que el PR sea más fácil de revisar.
 
 Abrí el archivo correspondiente en un editor de texto, corregí el error, y guardá.
-
-**Ejemplos de correcciones:**
-
-En `style.css`, buscá esto:
-```css
-header {
-  display: block;   /* ← Error: debería ser flex */
-}
-```
-Y cambialo a:
-```css
-header {
-  display: flex;
-}
-```
-
-En `FLISOL.md`, buscá:
-```
-desima edición
-```
-Y cambialo a:
-```
-décima edición
-```
 
 ---
 
@@ -184,7 +156,7 @@ Las líneas en rojo (con `-`) son lo que borraste, las verdes (con `+`) son lo q
 Para agregar un archivo específico:
 
 ```bash
-git add style.css
+git add FLISOL.md
 ```
 
 Para agregar todos los archivos modificados:
@@ -208,7 +180,7 @@ Los archivos que agregaste aparecen en verde bajo `Changes to be committed`. Los
 Un commit es como una fotografía de tu proyecto en este momento. Viene con un mensaje que explica **qué cambió y por qué**.
 
 ```bash
-git commit -m "fix: corrijo display del header en style.css"
+git commit -m "fix: agrego charlas faltantes"
 ```
 
 ### ¿Cómo escribir un buen mensaje de commit?
@@ -232,13 +204,13 @@ tipo: descripción corta en imperativo (máximo 72 caracteres)
 git commit -m "cambios"
 
 # ❌ Describe qué, no por qué
-git commit -m "cambié display a flex"
+git commit -m "agrego charla"
 
 # ✅ Claro y útil
-git commit -m "fix: corrijo display del header que causaba desalineación"
+git commit -m "fix: agrego charlas faltantes"
 
 # ✅ Aún más contexto
-git commit -m "fix: reemplazo display:block por flex en header del FLISOL"
+git commit -m "fix: agrego charlas faltantes en index"
 ```
 
 Para ver el historial de commits del proyecto:
@@ -256,13 +228,19 @@ Deberías ver tu commit al tope de la lista.
 Hasta ahora todos los cambios están solo en tu computadora. Para que el resto del equipo los vea, hay que "pushear" la rama:
 
 ```bash
-git push origin fix/tu-nombre-descripcion-del-error
+git push origin fix-descripcion-del-error
 ```
 
 Si es la primera vez que subís esta rama, Git puede pedirte que confirmes con:
 
 ```bash
-git push --set-upstream origin fix/tu-nombre-descripcion-del-error
+git push --set-upstream origin fix-descripcion-del-error
+```
+
+También podés reemplazar `--set-upstream` por:
+
+```bash
+git push -u origin fix-descripcion-del-error
 ```
 
 Copiá y pegá el comando que Git te sugiere — funciona igual.
@@ -271,7 +249,7 @@ Copiá y pegá el comando que Git te sugiere — funciona igual.
 
 ## Paso 10 — Abrir el Pull Request
 
-1. Andá al repositorio en GitHub (o la plataforma que use el facilitador)
+1. Andá al repositorio en GitHub
 2. Vas a ver un cartel amarillo que dice algo como *"Tu rama tuvo cambios recientes — ¿querés abrir un Pull Request?"* — hacé click en **Compare & pull request**
 3. Completá el formulario:
    - **Título**: Usá el mismo formato que el commit (`fix: ...`)
@@ -282,15 +260,13 @@ Copiá y pegá el comando que Git te sugiere — funciona igual.
 
 ```
 ## ¿Qué cambia este PR?
-Corrige el `display` del header en style.css.
+Corrige el cronograma de charlas de la página.
 
 ## ¿Por qué era un error?
-Con `display: block` los elementos del header se apilaban verticalmente
-en lugar de quedar alineados en fila.
+Porque estaba incompleto, ahora muestra el cronograma completo del evento.
 
 ## ¿Cómo verificar?
-Abrir index.html en el navegador — el header ahora muestra el logo
-y el título correctamente alineados.
+Abrir index.html en el navegador — ahora deberían verse las charlas/talleres faltantes.
 ```
 
 ---
@@ -307,7 +283,7 @@ git pull origin main
 ```
 
 ### "Permission denied" al hacer push
-Puede ser un problema de credenciales. Avisá a un facilitador — puede que necesites autenticarte con un token.
+Puede ser un problema de credenciales. Avisanos — puede que necesites autenticarte con un token.
 
 ### "nothing to commit, working tree clean"
 No hiciste cambios todavía, o ya los commiteaste. Usá `git status` y `git log --oneline` para orientarte.
